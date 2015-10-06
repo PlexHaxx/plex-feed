@@ -46,7 +46,7 @@ def main():
     for elt in list(ordered)[:50]:
         fe = fg.add_entry()
         fe.id(elt.getStreamUrl())
-        fe.title(elt.title)
+        fe.title('{} - {}'.format(elt.title, elt.server.friendlyName))
         fe.pubdate(paris.localize(elt.addedAt))
         fe.description(elt.summary, True)
 
